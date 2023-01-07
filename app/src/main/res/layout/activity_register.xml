@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor"
+    tools:context=".Register">
+
+    <ImageView
+
+        android:id="@+id/rotate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.6"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:gravity="bottom|center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="PharmaLoc"
+                android:textColor="@color/white"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgAdd"
+                android:layout_width="76dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_person"/>
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/btnUpload"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgProfile" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="SignUp"
+                android:textStyle="bold"
+                app:cornerRadius="20dp"
+                app:elevation="10dp"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.2"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/nom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/white"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/playfair_display"
+                android:hint="Username"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/white" />
+            <EditText
+                android:id="@+id/prenom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/white"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/playfair_display"
+                android:hint="Username"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/playfair_display"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/psw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/playfair_display"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="@color/white" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="SignUp"
+                android:textStyle="bold"
+                app:cornerRadius="20dp"
+                app:elevation="10dp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="Login"
+                android:textStyle="bold"
+                app:cornerRadius="20dp"
+                app:elevation="10dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

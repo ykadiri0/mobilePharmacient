@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.gallery.GalleryFragment">
+
+    <LinearLayout
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/purple_500"
+        android:orientation="horizontal" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp"
+        app:layout_anchor="@id/background"
+        app:layout_anchorGravity="center_horizontal|bottom">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgAdd"
+            android:layout_width="76dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_baseline_local_pharmacy_24"/>
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnUpload"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgProfile" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/text_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:text="TextView"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.184"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ic1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                app:hintAnimationEnabled="false"
+                app:hintTextColor="@color/itemTextColor"
+                app:startIconDrawable="@drawable/ic_baseline_local_pharmacy_24"
+                app:startIconTint="@color/primaryColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ic2"
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Lat"
+                app:hintAnimationEnabled="false"
+                app:hintTextColor="@color/itemTextColor"
+                app:startIconDrawable="@drawable/ic_baseline_add_location_alt_24"
+                app:startIconTint="@color/primaryColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/lat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ic3"
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Long"
+                app:hintAnimationEnabled="false"
+                app:hintTextColor="@color/itemTextColor"
+                app:startIconDrawable="@drawable/ic_baseline_add_location_alt_24"
+                app:startIconTint="@color/primaryColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/lon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ic4"
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Ville"
+                app:hintAnimationEnabled="false"
+                app:hintTextColor="@color/itemTextColor"
+                app:startIconDrawable="@drawable/ic_baseline_location_city_24"
+                app:startIconTint="@color/primaryColor">
+
+                <AutoCompleteTextView
+                    android:id="@+id/filled_exposed_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ic5"
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Zone"
+                app:hintAnimationEnabled="false"
+                app:hintTextColor="@color/itemTextColor"
+                app:startIconDrawable="@drawable/ic_baseline_location_city_24"
+                app:startIconTint="@color/primaryColor">
+
+                <AutoCompleteTextView
+                    android:id="@+id/filled_exposed_dropdown2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:padding="12dp"
+                android:text="Confirm"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:cornerRadius="5dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
